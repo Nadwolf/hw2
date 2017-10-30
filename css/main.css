@@ -363,37 +363,37 @@ th {
 
 @font-face {
   font-family: 'lifehack';
-  src: url("/fonts/lifehack/lifehack-medium.woff2") format("woff2"), url("/fonts/lifehack/lifehack-medium.woff") format("woff");
+  src: url("../fonts/lifehack/lifehack-medium.woff2") format("woff2"), url("../fonts/lifehack/lifehack-medium.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'gagalin';
-  src: url("/fonts/gagalin/gagalin-regular.woff2") format("woff2"), url("/fonts/gagalin/gagalin-regular.woff") format("woff");
+  src: url("../fonts/gagalin/gagalin-regular.woff2") format("woff2"), url("../fonts/gagalin/gagalin-regular.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntu';
-  src: url("/fonts/ubuntu/ubuntu-b.woff2") format("woff2"), url("/fonts/ubuntu/ubuntu-b.woff") format("woff");
+  src: url("../fonts/ubuntu/ubuntu-b.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-b.woff") format("woff");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntu';
-  src: url("/fonts/ubuntu/ubuntu-light.woff2") format("woff2"), url("/fonts/ubuntu/ubuntu-light.woff") format("woff");
+  src: url("../fonts/ubuntu/ubuntu-light.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-light.woff") format("woff");
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntu';
-  src: url("/fonts/ubuntu/ubuntu-medium.woff2") format("woff2"), url("/fonts/ubuntu/ubuntu-medium.woff") format("woff");
+  src: url("../fonts/ubuntu/ubuntu-medium.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-medium.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntu';
-  src: url("/fonts/ubuntu/ubuntu-regular.woff2") format("woff2"), url("/fonts/ubuntu/ubuntu-regular.woff") format("woff");
+  src: url("../fonts/ubuntu/ubuntu-regular.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-regular.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
@@ -468,7 +468,7 @@ html {
     background-color: #2f3234; }
 
 .head {
-  background: url(/img/bg_img/texture.jpg) no-repeat 50%;
+  background: url(../img/bg_img/texture.jpg) no-repeat 50%;
   background-size: cover; }
   .head__content {
     display: -webkit-box;
@@ -582,7 +582,7 @@ html {
   color: #fff; }
 
 .best {
-  background: url(/img/bg_img/bg.jpg) no-repeat 50%;
+  background: url(../img/bg_img/bg.jpg) no-repeat 50%;
   background-size: cover; }
   .best__container {
     padding-top: 70px; }
