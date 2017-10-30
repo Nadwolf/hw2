@@ -1,0 +1,12 @@
+@mixin circle($width, $color) {
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+    background-color: $color;
+  }
+
+  %reset-ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }

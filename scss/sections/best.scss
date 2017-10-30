@@ -1,0 +1,66 @@
+.best {
+    background: url(/img/bg_img/bg.jpg) no-repeat 50%;
+    background-size: cover;
+
+    &__container{
+        padding-top: 70px;
+    }
+    
+    &__title {
+        margin: 0;
+        font-family: 'gagalin', Arial, Helvetica, sans-serif;
+        font-size: 72px;
+        font-weight: 300;
+        line-height: 1;
+        color: $dark;
+    }
+
+    &__content {
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @extend %reset-ul;
+        text-align: center;
+    }
+
+    &__img {
+        display: inline-block;
+        width: 100px;
+        height: 90px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        width: 300px;
+        
+        &__img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100px;
+            height: 90px;
+        }
+
+        & h2 {
+            margin: 0;
+            font-family: 'lifehack', Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.16;
+            color: $dark;
+        }
+
+        & p {
+            font-family: 'ubuntu', Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 200;
+            line-height: 1.71;
+            color: $dark;
+        }
+    }
+}
