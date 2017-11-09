@@ -3,9 +3,30 @@
     height: $width;
     border-radius: 50%;
     background-color: $color;
-  }
+}
 
-  %reset-ul {
+@function rem($px) {
+    @return $px / 16px + 0rem;
+}
+
+@mixin desktop {
+    @media screen and (max-width: $desktop) {
+      @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+      @content;
+    }
+}
+@mixin phones {
+    @media screen and (max-width: $phones) {
+      @content;
+    }
+}
+
+%reset-ul {
       margin: 0;
       padding: 0;
       list-style: none;

@@ -1,0 +1,172 @@
+.order {
+    background: url(../img/bg_img/form.jpg) no-repeat 50%;
+    background-size: cover;
+
+    &__title{
+        margin: 0;
+        margin-bottom: rem(72px);
+        font-family: 'gagalin', Arial, Helvetica, sans-serif;
+        font-size: rem(72px);
+        font-weight: 300;
+        line-height: 1;
+        color: $yellow;
+        text-transform: uppercase;
+
+        @include phones {
+            font-size: rem(50px);
+        }
+    }
+}
+
+.form {
+    width: 100%;
+
+    &__content {
+        display: flex;
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__cell {
+        width: 50%;
+        margin-right: rem(20px);
+        flex-grow: 1;
+
+        @include tablets {
+            width: 65.555%;
+            margin: 0;
+        }
+
+        @include phones {
+            width: 100%;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: rem(15px);
+
+        @include phones {
+            margin-bottom: rem(30px);
+        }
+    }
+
+    &__info {
+        flex-grow: 1;
+        margin-right: rem(20px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--radio {
+            flex-grow: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(3px);
+        font-family: 'ubuntu', Arial, Helvetica, sans-serif;
+        font-weight: 200;
+        color: $white;
+        font-size: rem(14px);
+
+        &--radio {
+            position: relative;
+            margin: 0;
+            padding-left: rem(24px);
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                @include circle(rem(15px), $white);
+                transform: translateY(-50%);
+            }
+        }
+
+        &--checkbox {
+            padding-left: rem(24px);
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: rem(15px);
+                height: rem(15px);
+                background-color: $white;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__input {
+        font-size: rem(14px);
+        padding: rem(8px) rem(10px);
+        border: 0;
+        border-radius: 5px;
+        outline: none;
+        color: $dark;
+        width: 100%;
+          
+    }
+
+    &__text {
+        width: 100%;
+        border: 0;
+        border-radius: 5px;
+        outline: none;
+        min-height: rem(110px);
+        resize: none;
+    }
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+        margin-top: rem(-10px);
+
+        @include phones {
+            align-items: center;
+            margin-top: rem(28px);
+        }
+    }
+
+    &__radio {
+        display: none;
+
+        &:checked + .form__title--radio::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: rem(4px);
+                @include circle(rem(7px), $red-hover);
+                transform: translateY(-50%);
+        }
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked + .form__title--checkbox::after {
+            content: "✔";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            color: $red-hover;
+            font-family: 'ubuntu', Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            font-size: rem(14px);
+            transform: translateY(-50%) translateX(25%);
+    }
+    }
+}
