@@ -411,6 +411,12 @@ body {
   color: #2f3234;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 14px; } }
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: 12px; } }
 
 body,
 html {
@@ -427,15 +433,9 @@ html {
 
 .section {
   height: 100%;
-  min-width: 58.75rem;
+  width: 100%;
   min-height: 40.625rem;
   background-color: #0e1315; }
-  @media screen and (max-width: 768px) {
-    .section {
-      min-width: 45rem; } }
-  @media screen and (max-width: 480px) {
-    .section {
-      min-width: 30rem; } }
 
 .container {
   display: -webkit-box;
@@ -452,14 +452,16 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  width: 940px;
+  max-width: 940px;
+  width: 100%;
   height: 100%; }
   @media screen and (max-width: 768px) {
     .container {
-      width: 720px; } }
+      max-width: 720px; } }
   @media screen and (max-width: 480px) {
     .container {
-      width: 100%; } }
+      max-width: 480px;
+      padding: 0 4%; } }
 
 .btn {
   min-width: 6.125rem;
@@ -509,13 +511,15 @@ html {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
-                flex-direction: column; } }
+                flex-direction: column;
+        text-align: center; } }
   .head__img {
     width: 50%;
     margin-right: 0.9375rem; }
     @media screen and (max-width: 768px) {
       .head__img {
-        width: 62.5%; } }
+        width: 62.5%;
+        margin: 0; } }
     @media screen and (max-width: 480px) {
       .head__img {
         width: 81.81%; } }
@@ -523,6 +527,12 @@ html {
       width: 100%; }
   .head__descr {
     width: 50%; }
+    @media screen and (max-width: 768px) {
+      .head__descr {
+        width: 62.5%; } }
+    @media screen and (max-width: 480px) {
+      .head__descr {
+        width: 81.81%; } }
 
 .header {
   display: -webkit-box;
@@ -611,7 +621,7 @@ html {
   white-space: nowrap; }
   @media screen and (max-width: 480px) {
     .description__title {
-      font-size: 3.9375rem; } }
+      font-size: 3.3125rem; } }
 
 .description__info {
   margin: 0;
@@ -625,7 +635,7 @@ html {
       text-align: center; } }
   @media screen and (max-width: 480px) {
     .description__info {
-      font-size: 3.375rem; } }
+      font-size: 2.75rem; } }
 
 .hamburger-menu {
   display: none;
@@ -637,47 +647,15 @@ html {
     .hamburger-menu {
       display: block; } }
   .hamburger-menu__link {
-    position: relative;
     display: block;
-    height: 100%; }
-    .hamburger-menu__link--active .hamburger-menu__icon {
-      background-color: transparent; }
-      .hamburger-menu__link--active .hamburger-menu__icon::before {
-        -webkit-transform: translateY(0) rotate(135deg);
-            -ms-transform: translateY(0) rotate(135deg);
-                transform: translateY(0) rotate(135deg); }
-      .hamburger-menu__link--active .hamburger-menu__icon::after {
-        -webkit-transform: translateY(-0.25rem) rotate(-135deg);
-            -ms-transform: translateY(-0.25rem) rotate(-135deg);
-                transform: translateY(-0.25rem) rotate(-135deg); }
+    height: 100%;
+    width: 100%; }
   .hamburger-menu__icon {
-    position: absolute;
-    top: 50%;
     width: 100%;
-    height: 0.25rem;
-    background-color: #fff;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
-    .hamburger-menu__icon::before, .hamburger-menu__icon::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-      -webkit-transform: translateY(-0.625rem);
-          -ms-transform: translateY(-0.625rem);
-              transform: translateY(-0.625rem);
-      -webkit-transition: 0.7s;
-      -o-transition: 0.7s;
-      transition: 0.7s; }
-    .hamburger-menu__icon::after {
-      -webkit-transform: translateY(0.375rem);
-          -ms-transform: translateY(0.375rem);
-              transform: translateY(0.375rem); }
+    height: 100%;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
 
 .best {
   background: url(../img/bg_img/bg.jpg) no-repeat 50%;
@@ -772,7 +750,7 @@ html {
 
 .reviews__container {
   height: 100%;
-  min-width: 20rem; }
+  width: 100%; }
 
 .reviews__list {
   height: 100%;
@@ -1143,6 +1121,7 @@ html {
     font-weight: 300;
     line-height: 1;
     color: #f9b43b;
+    text-align: center;
     text-transform: uppercase; }
     @media screen and (max-width: 480px) {
       .order__title {
