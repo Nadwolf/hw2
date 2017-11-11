@@ -1,24 +1,23 @@
 .best {
     background: url(../img/bg_img/bg.jpg) no-repeat 50%;
     background-size: cover;
-
-    &__container{
-        padding-top: 70px;
-    }
     
     &__title {
         margin: 0;
+        margin-bottom: rem(78px);
         font-family: 'gagalin', Arial, Helvetica, sans-serif;
-        font-size: 72px;
+        font-size: rem(72px);
         font-weight: 300;
         line-height: 1;
         color: $dark;
+
+        @include phones {
+            font-size: rem(50px);
+        }
     }
 
     &__content {
         width: 100%;
-        margin-top: auto;
-        margin-bottom: auto;
     }
 
     &__list {
@@ -26,30 +25,55 @@
         justify-content: space-between;
         align-items: flex-start;
         @extend %reset-ul;
-        text-align: center;
+
+        @include phones {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
     }
 
     &__img {
         display: inline-block;
-        width: 100px;
-        height: 90px;
+        width: rem(100px);
+        height: rem(90px);
         margin-bottom: 30px;
+
+        @include phones {
+            margin-right: rem(25px);
+        }
+
+        &-icon {
+            width: rem(100px);
+            height: rem(90px);
+        }
     }
 
     &__item {
-        width: 300px;
-        
-        &__img {
-            display: inline-block;
-            vertical-align: middle;
-            width: 100px;
-            height: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: rem(300px);
+
+        @include phones {
+            width: 100%;
+            flex-direction: row;
+            align-items: stretch;
+            margin-bottom: rem(50px);
+        }
+    }
+
+    &__description {
+        text-align: center;
+
+        @include phones {
+            text-align: left;
         }
 
         & h2 {
             margin: 0;
             font-family: 'lifehack', Arial, Helvetica, sans-serif;
-            font-size: 24px;
+            font-size: rem(24px);
             font-weight: 400;
             line-height: 1.16;
             color: $dark;
@@ -57,7 +81,7 @@
 
         & p {
             font-family: 'ubuntu', Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: rem(14px);
             font-weight: 200;
             line-height: 1.71;
             color: $dark;

@@ -9,11 +9,25 @@
         width: 100%;
         margin-top: auto;
         margin-bottom: auto;
+
+        @include tablets {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__img {
         width: 50%;
-        margin-right: 15px;
+        margin-right: rem(15px);
+
+        @include tablets {
+            width: 62.5%;
+            margin: 0;
+        }
+
+        @include phones {
+            width: 81.81%;
+        }
 
         & img {
             width: 100%;
@@ -22,6 +36,14 @@
 
     &__descr {
         width: 50%;
+
+        @include tablets {
+            width: 62.5%;
+        }
+
+        @include phones {
+            width: 81.81%;
+        }
     }
 }
 
@@ -31,19 +53,25 @@
     align-items: center;
     width: 100%;
 
+    &__menu {
+        @include tablets {
+            display: none;
+        }
+    }
+
     &__logo {
         margin-right: auto;
-        padding-top: 12px;
+        padding-top: rem(12px);
     }
 
     &__batton {
-        margin-left: 15px;
+        margin-left: rem(15px);
     }
 }
 
 .logo {
     position: relative;
-    max-width: 92px;
+    max-width: rem(92px);
 
     &__img {
         width: 100%;
@@ -52,7 +80,7 @@
     &__h1 {
         position: absolute;
         top: 0;
-        left: -9999px;
+        left: rem(-9999px);
         font-size: 0;
     }
 }
@@ -67,7 +95,7 @@
 
     &__item {
         position: relative;
-        margin-right: 36px;
+        margin-right: rem(36px);
 
         &:last-child::after{
             display: none;
@@ -78,8 +106,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: -20px;
-            @include circle(4px, $white);
+            right: rem(-20px);
+            @include circle(rem(4px), $white);
         }
 
         &:last-child {
@@ -88,8 +116,8 @@
     }
 
     &__link {
-        border-bottom: 1px solid transparent;
-        font-size: 13px;
+        border-bottom: rem(1px) solid transparent;
+        font-size: rem(13px);
         line-height: 1.71;
         font-weight: 400;
         text-decoration: none;
@@ -99,7 +127,7 @@
 
         &:hover {
             color: $red;
-            border-bottom: 1px solid $red;
+            border-bottom: rem(1px) solid $red;
         }
     }
 }
@@ -108,18 +136,54 @@
     &__title {
         margin: 0;
         font-family: 'gagalin', Arial, Helvetica, sans-serif;
-        font-size: 72px;
+        font-size: rem(72px);
         font-weight: 300;
         line-height: 1.71;
         color: $yellow;
+        white-space: nowrap;
+
+        @include phones {
+            font-size: rem(53px);
+        }
     }
 
     &__info {
         margin: 0;
         font-family: 'lifehack', Arial, Helvetica, sans-serif;
-        font-size: 65px;
+        font-size: rem(65px);
         font-weight: 400;
         line-height: .9;
         color: $white;
+
+        @include tablets {
+            text-align: center;
+        }
+
+        @include phones {
+            font-size: rem(44px);
+        }
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    width: rem(24px);
+    height: rem(24px);
+    margin-left: rem(30px);
+    margin-right: rem(7px);
+    @include tablets {
+        display: block;
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        transition: .5s;
     }
 }
